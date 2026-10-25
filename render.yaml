@@ -1,0 +1,10 @@
+# Render blueprint - use this if you deploy the video-maker folder as its own repo.
+# In Render: New > Web Service > connect the repo, choose Docker, and it will
+# pick up this file. Start with "free" to test, then switch to "starter"
+# if you want it to stay awake for your team member.
+services:
+  - type: web
+    name: video-maker
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
